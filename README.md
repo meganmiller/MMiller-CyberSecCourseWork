@@ -7,7 +7,7 @@ The files in this repository were used to configure the network depicted below.
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to recreate the entire deployment pictured above. Each portion of the playbook is broken down into individual playbooks, so that only certain pieces might be installed, such as Filebeat or Metricbeat only. 
 
-  - [DVWA playbook](/playbooks/install-DVWA.yml)
+  - [DVWA playbook](playbooks/install-DVWA.yml)
   - [ELK playbook](playbooks/install-elk.yml)
   - [Filebeat playbook](playbooks/filebeat-playbook.yml)
   - [Metricbeat playbook](playbooks/metricbeat-playbook.yml)
@@ -135,7 +135,8 @@ We have installed the following Beats on these machines:
 - Metricbeat
 
 These Beats allow us to collect the following information from each machine:
-- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
+- Filebeat ships the logs, including application, service, system and event logs. For example, syslog files, showing general information about the activity on the system, and auth.log files, that detail both failed and successful logins or authentications. 
+- Metricbeat records the metrics of the machine, like CPU and memory usage. For example, each machine ships CPU Usage, Network IO, and Memory Usage information.
   
 ---------------------------------
 
