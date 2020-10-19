@@ -3,7 +3,7 @@
 
 The files in this repository were used to configure the network depicted below.
 
-![ELK diagram](Images/MMiller-AzureRG-ELK-Diagram.png)
+![ELK diagram](images/MMiller-AzureRG-ELK-Diagram.png)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to recreate the entire deployment pictured above. Each portion of the playbook is broken down into individual playbooks, so that only certain pieces might be installed, such as Filebeat or Metricbeat only. 
 
@@ -96,7 +96,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the DVWA instance.
 
-![screenshot of docker ps output](Images/docker_ps_dvwa.png)
+![screenshot of docker ps output](images/docker_ps_dvwa.png)
 
 ### Target Machines
 This playbook configured the DVWA instance on the following machines:
@@ -119,7 +119,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![screenshot of docker ps output](Images/docker_ps_elk.png)
+![screenshot of docker ps output](images/docker_ps_elk.png)
 
 ### Target Machines & Beats
 This ELK server:
@@ -149,7 +149,7 @@ SSH into the control node and follow the steps below:
 - Copy the playbook files fpr DVWA, ELK, Filebeat and Metricbeat to `/etc/ansible/roles`
 - Update the `/etc/ansible/hosts` file to create groups to specify the DVWA machines and the ELK machine. Also include the line for using python3.
 
-![screenshot of hosts file](Images/hosts.png)
+![screenshot of hosts file](images/hosts.png)
 
 ### DVWA -
 Run the DVWA playbook.
@@ -171,9 +171,9 @@ To use the Filebeats playbook, the `filebeat-config.yml` file needs to be config
 
 
 - Set "Elasticsearch output" hosts IP to ELK machine IP / port 9200.
-![screenshot of filebeat-config](Images/filebeat-config1.png)
+![screenshot of filebeat-config](images/filebeat-config1.png)
 - Set  "Kibana" host IP to ELK machine IP / port 5601.
-![screenshot of filebeat-config](Images/filebeat-config0.png)
+![screenshot of filebeat-config](images/filebeat-config0.png)
 
 Run the Filebeat playbook.
 - `ansible-playbook filebeat-playbook.yml`
@@ -184,9 +184,9 @@ Run the Filebeat playbook.
 To use the Metricbeats playbook, the `metricbeat-config.yml` file needs to be configured and saved to `/etc/ansible/roles/files/`
 
 - Set "Kibana" host IP to ELK machine IP / port 5601.
-![screenshot of metricbeat-config](Images/metricbeat-config1.png)
+![screenshot of metricbeat-config](images/metricbeat-config1.png)
 - Set "Elasticsearch output" hosts IP to ELK machine IP / port 9200. 
-![screenshot of metricbeat-config](Images/metricbeat-config0.png)
+![screenshot of metricbeat-config](images/metricbeat-config0.png)
 
 Run the Metricbeat playbook.
 - `ansible-playbook metricbeat-playbook.yml`
