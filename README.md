@@ -7,7 +7,7 @@ The files in this repository were used to configure the network depicted below.
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to recreate the entire deployment pictured above. Each portion of the playbook is broken down into individual playbooks, so that only certain pieces might be installed, such as Filebeat or Metricbeat only. 
 
-  - [DVWA playbook](playbooks/install-DVWA.yml)
+  - [DVWA playbook](/playbooks/install-DVWA.yml)
   - [ELK playbook](playbooks/install-elk.yml)
   - [Filebeat playbook](playbooks/filebeat-playbook.yml)
   - [Metricbeat playbook](playbooks/metricbeat-playbook.yml)
