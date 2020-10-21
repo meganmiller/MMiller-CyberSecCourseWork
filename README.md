@@ -112,7 +112,7 @@ This playbook configured the DVWA instance on the following machines:
 Ansible was also used to automate configuration of the ELK machine. 
 
 The playbook implements the following tasks:
-- Increaases virtual memory with sysctl.
+- Increases virtual memory with sysctl.
 - Uses apt to install docker.io and python3.
 - Uses pip to install docker.
 - Installs ELK container and sets published ports to 5044:5044, 5601:5601, and 9200:9200.
@@ -147,7 +147,7 @@ These Beats allow us to collect the following information from each machine:
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the playbook files fpr DVWA, ELK, Filebeat and Metricbeat to `/etc/ansible/roles`
+- Copy the playbook files for DVWA, ELK, Filebeat and Metricbeat to `/etc/ansible/roles`
 - Update the `/etc/ansible/hosts` file to create groups to specify the DVWA machines and the ELK machine. Also include the line for using python3.
 
 ![screenshot of hosts file](images/hosts.png)
