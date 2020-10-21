@@ -50,16 +50,16 @@ The configuration details of each machine may be found below.
 ## Access Policies
 ---------------------------------
 
-The JumpBoxProvisioner machine can accept limited connections from the Internet. Access to this machine is only allowed from the following IP addresses and at the following ports:
+The JumpBoxProvisioner machine can accept limited connections from the Internet. Access to this machine is only allowed from the following IP address and at the following port:
 - 76.89.252.255 / port 22
 
-The Azure Load Balancer can accept connections from the Internet. TCP protocol is allowed from the following IP addresses and at the following ports:
+The Azure Load Balancer can accept connections from the Internet. TCP protocol is allowed from the following IP addresses and at the following port:
 - any / port 80
 
 The machines on the internal network with only private IPs (Web1, Web2, Web3) are not directly exposed to the public Internet. Web1, Web2 and Web 3 can accept TCP traffic from the JumpBoxProvisioner, from the following IP and port:
 - 10.0.0.4 / port 22  
   
-Web1, Web2 + Web3 can also accept any TCP traffic from the following Azure Load Balancer, as part of it's backend pool setup, from the following IP and port:
+Web1, Web2 + Web3 can also accept any TCP traffic from the following Azure Load Balancer, as part of its backend pool setup, from the following IP and port:
 - 52.250.23.39 / port 80
 
 The ELK machine can accept limited connections from the Internet. ELK can accept TCP traffic from the workstation, from the following IP and port:
